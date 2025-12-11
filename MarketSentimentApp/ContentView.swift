@@ -47,6 +47,7 @@ struct ContentView: View {
             tabs
         }
         .tabViewStyle(.automatic)
+        .frame(minWidth: 800, minHeight: 300)
     }
     
     
@@ -55,32 +56,39 @@ struct ContentView: View {
         dashboardTab
         newsTab
         WatchlistsTab
-        alertsTab
     }
     
     
     private var dashboardTab: some TabContent<TabSelections> {
         Tab(TabSelections.dashboard.title, image: TabSelections.dashboard.icon, value: .dashboard) {
-            DashboardView()
+            NavigationStack {
+                DashboardView()
+            }
         }
     }
     
     
     private var newsTab: some TabContent<TabSelections> {
         Tab(TabSelections.news.title, image: TabSelections.news.icon, value: .news) {
-            NewsView()
+            NavigationStack {
+                NewsView()
+            }
         }
     }
     
     private var WatchlistsTab: some TabContent<TabSelections> {
         Tab(TabSelections.watchlist.title, image: TabSelections.watchlist.icon, value: .watchlist) {
-            WatchlistsView()
+            NavigationStack {
+                WatchlistsView()
+            }
         }
     }
     
     private var alertsTab: some TabContent<TabSelections> {
         Tab(TabSelections.alerts.title, image: TabSelections.alerts.icon, value: .alerts) {
-            AlertsView()
+            NavigationStack {
+                AlertsView()
+            }
         }
     }
     
