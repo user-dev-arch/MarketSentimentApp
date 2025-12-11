@@ -12,18 +12,14 @@ pip install -r requirements.txt
 
 
 ### Create a .env file in the backend root
-# Stock Market API
+Stock Market API
 ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
 
-# Twitter API (v2)
+Twitter API (v2)
 TWITTER_BEARER_TOKEN=your_twitter_bearer_token_here
 
-# News API
+News API
 NEWS_API_KEY=your_news_api_key_here
-
-# OpenAI API (optional)
-OPENAI_API_KEY=your_openai_api_key_here
-USE_EXTERNAL_SENTIMENT_API=false
 
 ### Run Backend Server
 python manage.py runserver
